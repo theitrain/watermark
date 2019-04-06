@@ -2,6 +2,7 @@ import os
 import sys
 from PIL import Image
 
+EXTS = ('.jpg', '.png')
 
 if len(sys.argv) < 3:
     print('Usage: watermark.py \'image folder path\' \'logo path\' [topleft, topright, bottomleft, bottomright, center]')
@@ -21,7 +22,7 @@ logoHeight = logo.height
 
 
 for filename in os.listdir(path):
-    if (filename.endswith('.jpg') or filename.endswith('.png')) and (filename != lgo):
+    if any([filename.lower().endswith(ext) for ext in EXTS]) and filename != lgo:
 
         image = Image.open(path + '/' + filename)
         imageWidth = image.width
