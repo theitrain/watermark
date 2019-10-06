@@ -1,5 +1,6 @@
 import os
 import sys
+
 from PIL import Image
 
 EXTS = ('.jpg', '.png')
@@ -15,7 +16,6 @@ else:
     path = sys.argv[1]
     lgo = sys.argv[2]
 
-
 logo = Image.open(lgo)
 logoWidth = logo.width
 logoHeight = logo.height
@@ -23,7 +23,6 @@ logoHeight = logo.height
 
 for filename in os.listdir(path):
     if any([filename.lower().endswith(ext) for ext in EXTS]) and filename != lgo:
-
         image = Image.open(path + '/' + filename)
         imageWidth = image.width
         imageHeight = image.height
