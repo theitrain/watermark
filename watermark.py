@@ -1,7 +1,7 @@
 import os
 import sys
 
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image
 
 EXTS = ('.jpg', '.png')
 #!defaults##################
