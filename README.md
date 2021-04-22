@@ -64,4 +64,3 @@ image.save(path + '/fancy_new_prefix_' + filename)
 
 ### Ideas for future improvements
 - allow custom positioning
-- adjust watermarks to be semi-transparent
