@@ -89,6 +89,9 @@ def add_watermark(directory, logo_path, position, new_directory, padding, scale)
                     os.makedirs(final_save_directory)
 
                 new_image_path = os.path.join(final_save_directory, filename)
+                # Check if the image mode is 'RGBA' and convert it to 'RGB'
+                if image.mode == 'RGBA':
+                    image = image.convert('RGB')
                 image.save(new_image_path)
                 print('Added watermark to ' + new_image_path)
                 
