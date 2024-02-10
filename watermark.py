@@ -132,4 +132,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    add_watermark(args.dir, args.logo, args.pos, args.new_dir, args.padding)
+    add_watermark(args.dir, args.logo, args.pos, args.new_dir, args.padding, args.scale)
